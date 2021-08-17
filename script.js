@@ -22,12 +22,12 @@ class Calculator{
 
     chooseOperation(operation){
         if (this.currOperand === '') return
-        if (this.prevOperand !== ''){
-            this.compute()
-        }
         this.operation = operation
         this.prevOperand = this.currOperand
         this.currOperand = ''
+        if (this.prevOperand !== ''){
+            this.compute()
+        }
     }
 
     compute(){
@@ -45,7 +45,7 @@ class Calculator{
             case '÷':
                 computate = prev/curr
                 break
-            case '*':
+            case 'x':
                 computate = prev*curr
                 break     
             default:
